@@ -5,3 +5,11 @@ C:\Users\User\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\bin\x86\D
 C:\Users\User\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\bin\x86\Debug\Badumtsss.pdb
 C:\Users\User\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\obj\x86\Debug\Badumtsss.exe
 C:\Users\User\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\obj\x86\Debug\Badumtsss.pdb
+C:\Users\Ciprian\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\obj\x86\Debug\Badumtsss.csprojResolveAssemblyReference.cache
+C:\Users\Ciprian\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Ciprian\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\obj\x86\Debug\Badumtsss.exe
+C:\Users\Ciprian\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\obj\x86\Debug\Badumtsss.pdb
+C:\Users\Ciprian\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\bin\x86\Debug\Content\light_tex.xnb
+C:\Users\Ciprian\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\bin\x86\Debug\Badumtsss.exe
+C:\Users\Ciprian\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\bin\x86\Debug\Badumtsss.pdb
+C:\Users\Ciprian\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\bin\x86\Debug\Content\mirror_tex.xnb

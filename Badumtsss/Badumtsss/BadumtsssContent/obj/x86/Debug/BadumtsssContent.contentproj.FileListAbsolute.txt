@@ -1,1 +1,2 @@
 C:\Users\User\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\BadumtsssContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Ciprian\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\BadumtsssContent\obj\x86\Debug\BadumtsssContent.contentprojResolveAssemblyReference.cache
