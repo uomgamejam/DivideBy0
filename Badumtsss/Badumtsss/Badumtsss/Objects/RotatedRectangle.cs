@@ -10,7 +10,8 @@ namespace Badumtsss.Objects
     {
         protected Rectangle CollisionRectangle;
         protected float rotation;
-        protected  Vector2 origin;
+        protected Vector2 origin;       //the point around it rotates
+        protected Vector2 center;       //the absolute vector to the centre of the shape
 
         public RotatedRectangle(Rectangle theRectangle, float theInitialRotation)
         {
@@ -20,6 +21,10 @@ namespace Badumtsss.Objects
             //Calculate the Rectangles origin. We assume the center of the Rectangle will
             //be the point that we will be rotating around and we use that for the origin
             origin = new Vector2((int)theRectangle.Width / 2, (int)theRectangle.Height / 2);
+
+            //set the position of the center
+            center = new Vector2(theRectangle.Center.X, theRectangle.Center.Y + 3);
+            
         }
 
 
@@ -143,6 +148,11 @@ namespace Badumtsss.Objects
             Vector2 aLowerRight = new Vector2(CollisionRectangle.Right, CollisionRectangle.Bottom);
             aLowerRight = RotatePoint(aLowerRight, aLowerRight + new Vector2(-origin.X, -origin.Y), rotation);
             return aLowerRight;
+        }
+
+        public Vector2 Center
+        {
+            get { return center; }
         }
 
         public float Rotation

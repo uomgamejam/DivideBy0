@@ -28,6 +28,12 @@ namespace Badumtsss
 
         #region Properties
 
+        public Texture2D Texture
+        {
+            get { return texture; }
+            set { texture = value; }
+        }
+
         public Enum Type
         {
             get { return type; }
@@ -86,26 +92,26 @@ namespace Badumtsss
         /// <param name="height">length of the rectangle</param>
         /// <param name="initialRotation">The initial rotation of the object</param>
         public Obstacle(ObjectType type, Vector2 location, float width, float height, float initialRotation)
-            : base(new Rectangle((int)location.X, (int)location.Y, (int)width, (int)height), initialRotation)
+            : base(new Rectangle((int)(location.X - width / 2 ), (int)(location.Y - height / 2), (int)width, (int)height), initialRotation)
         {
             a = UpperLeftCorner();
             b = UpperRightCorner();
             c = LowerRightCorner();
             d = LowerLeftCorner();
 
-            //setTexture(type);
+            setTexture(type);
         }
 
         #region Methods
 
         private void setTexture(ObjectType type)
         {
-            Game1 game = new Game1();
+            ContentManager cnt = Game1.content;
             if (type == ObjectType.MIRROR)
-                texture = game.Content.Load<Texture2D>("mirror_tex");
+                texture = Game1.content.Load<Texture2D>("mirror_tex");
         }
 
-        private void Rotate(float rotation)
+        public void Rotate(float rotation)
         {
             this.rotation += rotation;
             a = UpperLeftCorner();
