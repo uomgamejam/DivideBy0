@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Badumtsss.Objects
 {
@@ -12,6 +13,8 @@ namespace Badumtsss.Objects
         protected float rotation;
         protected Vector2 origin;       //the point around it rotates
         protected Vector2 center;       //the absolute vector to the centre of the shape
+
+        #region Methods
 
         public RotatedRectangle(Rectangle theRectangle, float theInitialRotation)
         {
@@ -27,6 +30,10 @@ namespace Badumtsss.Objects
             
         }
 
+        public void Draw(GameTime gameTime, Texture2D tex, SpriteBatch sb)
+        {
+            sb.Draw(tex, new Rectangle(X + Width / 2, Y + Height / 2, Width, Height), null, Color.White, rotation, origin, SpriteEffects.None, 0);
+        }
 
         public void ChangePosition(int theXPositionAdjustment, int theYPositionAdjustment)
         {
@@ -38,7 +45,6 @@ namespace Badumtsss.Objects
         {
             return Intersects(new RotatedRectangle(theRectangle, 0.0f));
         }
-
 
         public bool Intersects(RotatedRectangle theRectangle)
         {
@@ -59,7 +65,6 @@ namespace Badumtsss.Objects
 
             return true;
         }
-
 
         private bool IsAxisCollision(RotatedRectangle theRectangle, Vector2 aAxis)
         {
@@ -98,7 +103,6 @@ namespace Badumtsss.Objects
 
             return false;
         }
-
 
         private int GenerateScalar(Vector2 theRectangleCorner, Vector2 theAxis)
         {
@@ -150,6 +154,9 @@ namespace Badumtsss.Objects
             return aLowerRight;
         }
 
+        #endregion
+
+        #region Properties
         public Vector2 Center
         {
             get { return center; }
@@ -186,5 +193,6 @@ namespace Badumtsss.Objects
         {
             get { return CollisionRectangle.Height; }
         }
+        #endregion
     }
 }

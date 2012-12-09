@@ -104,6 +104,11 @@ namespace Badumtsss
 
         #region Methods
 
+        public void Draw(GameTime gameTime, SpriteBatch sb)
+        {
+            base.Draw(gameTime, texture, sb);
+        }
+
         private void setTexture(ObjectType type)
         {
             ContentManager cnt = Game1.content;

@@ -142,6 +142,7 @@ namespace Badumtsss
             //update 1300 with MaxWidth
             //the beam of light
             RotatedRectangle beam = new RotatedRectangle(new Rectangle((int)start.X, (int)start.Y, 1300, 2), angle);
+            beam.Origin = new Vector2(beam.X, beam.Y);
             float dmin = 1300;
             float distance;
             Obstacle colidedObstacle = null;
@@ -186,9 +187,10 @@ namespace Badumtsss
                 currentObstacle = nextObstacle;
             }
             DrawLine(currentObstacle.Center, new Vector2(currentObstacle.Center.X * currentObstacle.Rotation, 1300));
-            
+
             foreach (var obstacle in obstacles)
-                spriteBatch.Draw(obstacle.Texture, new Rectangle(obstacle.X, obstacle.Y, 15, 45), null, Color.White, obstacle.Rotation, new Vector2(2.5f, 7.5f), SpriteEffects.None, 0);
+                //spriteBatch.Draw(obstacle.Texture, new Rectangle(obstacle.X, obstacle.Y, 15, 45), null, Color.White, obstacle.Rotation, new Vector2(2.5f, 7.5f), SpriteEffects.None, 0);
+                obstacle.Draw(gameTime, spriteBatch);
 
             spriteBatch.End();
 
