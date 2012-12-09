@@ -1,0 +1,7 @@
+C:\Users\User\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\User\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\User\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\bin\x86\Debug\Content\light_tex.xnb
+C:\Users\User\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\bin\x86\Debug\Badumtsss.exe
+C:\Users\User\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\bin\x86\Debug\Badumtsss.pdb
+C:\Users\User\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\obj\x86\Debug\Badumtsss.exe
+C:\Users\User\Documents\GitHub\DivideBy0\Badumtsss\Badumtsss\Badumtsss\obj\x86\Debug\Badumtsss.pdb

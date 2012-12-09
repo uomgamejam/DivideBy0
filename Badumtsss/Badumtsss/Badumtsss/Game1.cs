@@ -18,6 +18,8 @@ namespace Badumtsss
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Texture2D lightTexture;
+        Vector2[] obstacles = new Vector2[3];
 
         public Game1()
         {
@@ -42,10 +44,20 @@ namespace Badumtsss
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
         /// </summary>
+
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            // Load texture
+            lightTexture = Content.Load<Texture2D>("light_tex");
+
+            // Initialize obstacles
+            obstacles[0] = new Vector2(50, 50);
+            obstacles[1] = new Vector2(350, 50);
+            obstacles[2] = new Vector2(350, 500);
+            
 
             // TODO: use this.Content to load your game content here
         }
@@ -75,6 +87,15 @@ namespace Badumtsss
             base.Update(gameTime);
         }
 
+        private void DrawLine(Vector2 source, Vector2 destination)
+        {
+            float distance = Vector2.Distance(source, destination);
+            float angle = (float)Math.Atan2(destination.Y - source.Y, destination.X - source.X);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(lightTexture, new Rectangle((int)source.X, (int)source.Y, (int)distance, 2), null, Color.White, angle, Vector2.Zero, SpriteEffects.None, 0);
+            spriteBatch.End();
+        }
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -84,7 +105,11 @@ namespace Badumtsss
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
+            //  DrawLine(obstacles[0], obstacles[1]);
+            for (int index = 0; index <= 1; index++)
+                DrawLine(obstacles[index], obstacles[index + 1]);
+            Rectangle a = new Rectangle();
+            a.
             base.Draw(gameTime);
         }
     }
